@@ -47,7 +47,8 @@ contract PointsHooks is BaseHook, ERC1155 {
     // tx.origin is the EOA address but @note its not recommended to use tx.origin
     // @audit when user withdraw the amount (swap Tokens for ETH) he still have the ERC1155 balance 
     // should burn it when we withdraw( swaps against)
-    // transfer it when you transfer the token  
+    // transfer it when you transfer the token
+    //  @audit low add EVENT   
     function _afterSwap(
         address,
         PoolKey calldata _poolKey,
