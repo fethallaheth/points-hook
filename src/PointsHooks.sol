@@ -55,7 +55,7 @@ contract PointsHooks is BaseHook, ERC1155 {
         BalanceDelta _delta,
         bytes calldata _hookData
     ) internal override returns (bytes4, int128) {
-        // make sure this an Eth <> token pool
+        // make sure this an Eth <> token pool ;; added
         if (!_poolKey.currency0.isAddressZero()) {
             return (this.afterSwap.selector, 0);
         }
